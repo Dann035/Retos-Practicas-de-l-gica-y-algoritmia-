@@ -4,9 +4,9 @@ GET http://localhost:3001/
 POST http://localhost:3001/juego/nuevo
 
 ###
-POST http://localhost:3001/juego/adivinar HTTP/1.1
+POST http://localhost:3001/juego/adivinar
 content-Type: application/json
 
 {
-  "numero": 45
+  "numero": 50
 }
