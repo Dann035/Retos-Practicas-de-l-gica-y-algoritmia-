@@ -1,0 +1,32 @@
+GET http://localhost:3001/
+
+###
+GET http://localhost:3001/tareas
+
+###
+POST http://localhost:3001/tareas
+content-type: application/json
+
+{
+  "id": 1,
+  "texto": "Completar el Reto Nivel 3",
+  "completada": false
+}
+
+###
+PUT http://localhost:3001/tareas:id
+content-type: application/json
+
+{
+  "id": 1,
+  "texto": "Completar el Reto Nivel 3",
+  "completada": false
+}
+
+###
+DELETE http://localhost:3001/tareas:id
+content-type: application/json
+
+{
+  "id": 1
+}
