@@ -8,6 +8,29 @@ const PORT = process.env.import || 3001
 let numeroSecreto = 0
 let intentosDisponibles = 0
 
+function validateNumber(res, number) {
+  if (!number) {
+    return res.status(400).json({ msg: 'Debes enviar un número entre 1 y 100' })
+  } else if (isNaN(number)) {
+    return res.status(400).json({ msg: 'El valor enviado tiene que ser un número entre 1 y 100' })
+  } else if (number < 1 || number > 100) {
+    return res.status(400).json({ msg: 'El valor tiene que ser mayor que 1 y menor que 100' })
+  } else {
+    return true
+  }
+}
+
+function WinnerOrLoser(number, secretNumber, intentos, res) {
+  if (number === secretNumber) {
+    res.status(200).json({ msg: '¡Ganaste! El número era ' + secretNumber })
+    intentosDisponibles = 0
+  }
+  if (intentos <= 0) {
+    return res.status(200).json({ msg: '¡Perdiste! Se acabaron los intentos. El número era ' + secretNumber })
+  }
+  intentosDisponibles--
+}
+
 // Enpoint de presentacion del juego
 app.get('/', (req, res) => {
   res.json(
@@ -22,13 +45,21 @@ app.get('/', (req, res) => {
 app.post('/juego/nuevo', (req, res) => {
   numeroSecreto = Math.floor(Math.random() * 100) + 1
   intentosDisponibles = 10
-  res.json({ msg: '¡Nuevo juego iniciado! Tienes 10 intentos para adivinar.' })
+  res.json({ msg: `¡Nuevo juego iniciado! Tienes ${intentosDisponibles} intentos para adivinar.` })
 })
 
 // Endpoin para poder intentar adivinar el número
 
 app.post('/juego/adivinar', (req, res) => {
-  res.end('Aqui va la logica del game')
+  const userNumber = req.body.numero
+  if (validateNumber(res, userNumber)) {
+    WinnerOrLoser(userNumber, numeroSecreto, intentosDisponibles, res)
+    if (userNumber > numeroSecreto) {
+      res.status(200).json({ msg: '¡Muy alto! Te quedan ' + intentosDisponibles + ' intentos.' })
+    } else if (userNumber < numeroSecreto) {
+      res.status(200).json({ msg: '¡Muy bajo! Te quedan ' + intentosDisponibles + ' intentos.' })
+    }
+  }
 })
 
 app.listen(PORT, (err) => {
