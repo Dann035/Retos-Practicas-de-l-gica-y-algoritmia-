@@ -1,0 +1,12 @@
+{
+  "name": "retosjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "00": "tsx 00-Fizz-Buzz.ts"
+  },
+  "keywords": [],
+  "author": "Daniel Landa",
+  "license": "ISC",
+  "description": ""
+}

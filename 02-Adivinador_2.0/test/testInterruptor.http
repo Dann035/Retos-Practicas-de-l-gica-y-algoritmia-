@@ -1,0 +1,10 @@
+GET http://localhost:3001/
+
+###
+POST http://localhost:3001/incrementar
+
+###
+POST http://localhost:3001/decrementar
+
+###
+POST http://localhost:3001/reset

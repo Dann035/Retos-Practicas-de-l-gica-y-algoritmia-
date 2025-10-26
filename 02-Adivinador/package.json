@@ -1,0 +1,13 @@
+{
+  "name": "02-adivinador",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "02-Adivinador.js",
+  "keywords": [],
+  "author": "Daniel Landa",
+  "license": "ISC",
+  "description": "MiniGame de el Adivinador",
+  "devDependencies": {
+    "canvas-confetti": "1.9.3"
+  }
+}

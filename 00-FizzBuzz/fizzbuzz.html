@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <style>
+        body {
+            background-color: gray;
+            font-family: "system-ui";
+        }
+        span{
+            color: rgba(0, 0, 0, .7);
+        }
+        button{
+            background-color: #09f;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="card">
+        <div>
+            <h1>Quieres saber si tu número es FizzBuzz?</h1>
+        </div>
+        <div>
+            <span>Pues escribe tu número en el input y te dirá si es Fizz , Buzz , FizzBuzz o el mismo número</span>
+            <form>
+                <input class="number" type="tel" name="number" placeholder="100...">
+                <button class="btnEnviar">Enviar</button>
+            </form>
+        </div>
+        <div class="screen"></div>
+    </section>
+    <script src="./00-Fizz-Buzz.js"></script>
+</body>
+</html>
