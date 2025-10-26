@@ -1,0 +1,22 @@
+{
+  "name": "01-interruptor_2.0",
+  "version": "1.0.0",
+  "main": "01-interruptor_2.js",
+  "type": "module",
+  "scripts": {
+    "start": "node 01-interruptor_2.js"
+  },
+  "keywords": [],
+  "author": "Daniel Landa",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "5.1.0"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
