@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "01": "node 01-interruptor_2.js",
-    "02": "node 02-adivinador_2.js"
+    "02": "node --watch 02-adivinador_2.js"
   },
   "keywords": [],
   "author": "Daniel Landa",
