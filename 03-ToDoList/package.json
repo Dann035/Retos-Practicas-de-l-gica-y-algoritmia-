@@ -1,0 +1,23 @@
+{
+  "name": "03-todolist",
+  "version": "1.0.0",
+  "description": "Construir una API RESTful completa para gestionar una lista de tareas (To-Do list). La API debe correr en `Express.js` y persistir los datos en la memoria del servidor (usando variables globales).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch 03-ToDoList.js"
+  },
+  "keywords": [],
+  "author": "Daniel Landa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "5.1.0",
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
