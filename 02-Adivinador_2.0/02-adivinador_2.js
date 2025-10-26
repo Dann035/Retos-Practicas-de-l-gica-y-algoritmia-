@@ -3,7 +3,7 @@ import express from 'express'
 const app = express()
 app.use(express.json())
 
-const PORT = process.env.import || 3001
+const PORT = process.env.PORT || 3001
 
 let numeroSecreto = 0
 let intentosDisponibles = 0
